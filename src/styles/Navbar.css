@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    margin: 1rem;
+    z-index: 100;
+}
+a {
+    margin: 8px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.5rem;
+}
+a:hover{
+    text-decoration-color: black;
+    text-shadow: 0 0 15px #9072d1;
+    transition: all 0.5s ease-out;
+}
