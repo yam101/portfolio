@@ -1,16 +1,16 @@
-import "../styles/App.css";
-import aura_1 from "../assets/aura-1.png";
-import aura_2 from "../assets/aura-2.png";
+import "../styles/Hero.css";
+import aura from "../assets/aura.png";
 
-function Home() {
+function Hero() {
   return (
     <>
-      <div className="home-container">
-        <img src={aura_2} className="aura-2" />
+      <div className="hero-container">
+        <div className="foreground"></div>
+        <img src={aura} className="aura" />
+
         <div className="text-container">
-          <p>Hello, my name is</p>
           <h1>Yasmin</h1>
-          <p>A Software Engineering student at the University of Waterloo</p>
+          <p>Software Engineering Student</p>
 
           <div className="icon-container">
             <a href="https://github.com/yam101">
@@ -19,10 +19,13 @@ function Home() {
             <a href="https://www.linkedin.com/in/yasminmotahhary/">
               <i className="bx bxl-linkedin"></i>
             </a>
+            <a href="mailto:ymotahhary@uwaterloo.ca">
+              <i className="bx bx-envelope"></i>
+            </a>
           </div>
         </div>
       </div>
     </>
   );
 }
-export default Home;
+export default Hero;

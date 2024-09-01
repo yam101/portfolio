@@ -4,8 +4,54 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+  --bg-light: rgb(245, 245, 245);
+  --bg-dark: rgb(24, 24, 24);
+
+  --text-primary-light: black;
+  --text-primary-dark: rgb(225, 225, 225);
+
+  --text-hero-light: rgb(78, 69, 96);
+  --text-hero-dark: rgb(184, 178, 200);
+
+  --bg-primary-light: rgb(245, 245, 245);
+  --bg-primary-dark: rgb(40, 40, 40);
+
+  --bg-secondary-light: rgb(232, 232, 232);
+  --bg-secondary-dark: rgb(24, 24, 24);
+
+  --bg-dock-light: rgba(255, 255, 255, 0.9);
+  --bg-dock-dark: rgba(30, 30, 30, 0.9);
+
+  --shadow-dock-light: rgba(216, 216, 216, 0.75);
+  --shadow-dock-dark: rgba(9, 9, 9, 0.75);
+
+  --icon-navbar-light: rgb(180, 180, 180);
+  --icon-navbar-dark: rgb(126, 126, 126);
+
+  --border-dock-light: rgb(237, 237, 237);
+  --border-dock-dark: rgb(50, 50, 50);
+
+  --gradient-light: rgba(232, 208, 245, 0.48);
+  --gradient-dark: rgba(50, 40, 57, 0.48);
+
+  --gradient-opacity-light: 1;
+  --gradient-opacity-dark: 0.8;
+
+  --bg-card-light: rgba(231, 230, 230, 0.5);
+  --bg-card-dark: rgba(62, 62, 62, 0.5);
+
+  --border-card-light: rgba(210, 210, 210, 0.5);
+  --border-card-dark: rgba(77, 77, 77, 0.5);
+
+  --text-tooltip-light: rgb(100, 100, 100);
+  --text-tooltip-dark: rgb(167, 167, 167);
+
+  --shadow-project-light: rgb(235, 235, 235);
+  --shadow-project-dark: rgb(20, 20, 20);
+  
+  color: var(--text-primary);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,9 +59,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: black;
-    background-color: #f5f5f5;
-  }
+.light-theme {
+  --bg: var(--bg-light);
+  --text-primary: var(--text-primary-light);
+  --text-hero: var(--text-hero-light);
+  --bg-primary: var(--bg-primary-light);
+  --bg-secondary: var(--bg-secondary-light);
+  --bg-dock: var(--bg-dock-light);
+  --shadow-dock: var(--shadow-dock-light);
+  --icon-navbar: var(--icon-navbar-light);
+  --border-dock: var(--border-dock-light);
+  --gradient: var(--gradient-light);
+  --gradient-opacity: var(--gradient-opacity-light);
+  --bg-card: var(--bg-card-light);
+  --border-card: var(--border-card-light);
+  --text-tooltip: var(--text-tooltip-light);
+  --shadow-project: var(--shadow-project-light);
 }
+
+.dark-theme {
+  --bg: var(--bg-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-hero: var(--text-hero-dark);
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-dock: var(--bg-dock-dark);
+  --shadow-dock: var(--shadow-dock-dark);
+  --icon-navbar: var(--icon-navbar-dark);
+  --border-dock: var(--border-dock-dark);
+  --gradient: var(--gradient-dark);
+  --gradient-opacity: var(--gradient-opacity-dark);
+  --bg-card: var(--bg-card-dark);
+  --border-card: var(--border-card-dark);
+  --text-tooltip: var(--text-tooltip-dark);
+  --shadow-project: var(--shadow-project-dark);
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+

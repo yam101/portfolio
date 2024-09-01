@@ -1,0 +1,130 @@
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadein 2s forwards;
+}
+.foreground{
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--bg);
+    opacity: 0.9;
+    width: 500px;
+    height: 500px;
+    z-index: 11;
+}
+.aura{
+    max-width: none;
+    width: 650px;
+    height: 650px;
+    transform: translate(-10px, 10px);
+    margin: 0;
+    z-index: 10;
+    opacity: var(--gradient-opacity);
+    object-fit: contain;
+    animation: spin 10s infinite linear;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.text-container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    width: 300px;
+    text-align: center;
+    color: var(--text-hero);
+}
+.icon-container .bx{
+    font-size: 32px;
+    width: 100%;
+    height: 100%;
+    color: var(--text-hero);
+}
+
+.icon-container {
+    display: flex;
+    height: 30px;
+}
+.icon-container a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    margin-right: 20px;
+}
+.icon-container a:hover{
+    margin-right: 17px;
+}
+
+.icon-container a:hover .bx {
+    font-size: 35px;
+    transform: translate(-1.5px, -.5px);
+}
+
+.text-container h1{
+   font-size: 80px; 
+   margin: 0;
+   line-height: 80px;
+}
+.text-container p{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    .aura{
+        width: 525px;
+        height: 525px;
+    }
+    .foreground{
+        width: 400px;
+        height: 400px;
+    }
+    .text-container h1{
+        font-size: 65px; 
+     }
+    .text-container p{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .icon-container .bx{
+        font-size: 28px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .aura{
+        width: 425px;
+        height: 425px;
+    }
+    .foreground{
+        width: 325px;
+        height: 325px;
+    }
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg) translate(-10px, 10px);
+        scale: 1;
+    } 
+    50% { 
+        transform:rotate(180deg) translate(-10px, 10px); 
+        scale: 1.1
+    }
+    100% {
+        transform:rotate(360deg) translate(-10px, 10px); 
+        scale: 1
+    }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

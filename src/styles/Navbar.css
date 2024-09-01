@@ -1,26 +1,155 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-.nav-container {
+.dock {
     display: flex;
-    flex-direction: column;
     position: fixed;
-    top: 0;
-    right: 0;
-    background-color: transparent;
-    margin: 1rem;
+    bottom: 0;
+    left: 50%;
+    height: 65px;
+    width: fit-content;
+    transform: translateX(-50%);
+    background-color: var(--bg-dock);
+    border: 1px solid var(--border-dock);
+    box-shadow: 0px 5px 30px 5px var(--shadow-dock);
+    border-radius: 100px;
+    margin-bottom: 20px;
     z-index: 100;
+    align-items: center;
+    transition: width, cubic-bezier(0.25, 1, 0.5, 1) 0.5s;
 }
-a {
-    margin: 8px;
-    color: black;
-    font-family: "Oswald", sans-serif;
-    font-size: 1.2rem;
-    text-decoration: underline;
+.dock ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0px 5px;
+}
+.item{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    height: 45px;
+    width: 45px;
+    transition: top, cubic-bezier(0.25, 1, 0.5, 1) 0.3s;
+}
+.icon {
+    display: flex;
     text-decoration-color: transparent;
-    text-underline-offset: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-dock);
+    background-image: linear-gradient( 45deg, var(--bg-primary), 
+    var(--bg-secondary), var(--bg-primary), var(--bg-secondary) );
+    border-radius: 50%;
+    transition: width, height, margin-top, cubic-bezier(0.25, 1, 0.5, 1) 0.3s;
 }
-a:hover{
-    text-decoration-color: black;
-    text-shadow: 0 0 15px #9072d1;
-    transition: all 0.5s ease-out;
+.dock button {
+    border: none;
+    cursor: pointer;
+    background: none;
+    background-image: linear-gradient( 45deg, var(--bg-primary), 
+    var(--bg-secondary), var(--bg-primary), var(--bg-secondary) );
+}
+
+.item .bx{
+    color: var(--icon-navbar);
+    font-size: 24px;
+    margin: auto;
+    transition: font-size, cubic-bezier(0.25, 1, 0.5, 1) 0.3s;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -25px;
+    opacity: 0;
+    transition: transform .3s ease, opacity .2s ease, visibility 0.2s ease;
+    transition-delay: 0.4s;
+    background: var(--bg-dock);
+    color: var(--text-tooltip);
+    padding: 8px;
+    margin: auto;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 5px;
+    width: auto;
+    cursor: default;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+.indicator {
+    display: none;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--icon-navbar);
+    bottom: -7px;
+}
+.show{
+    display: block;
+}
+
+.bounce{
+    animation: bounce 3s ease;
+}
+
+@keyframes bounce {
+	0%, 30% {transform: translateY(0);}
+	10% {transform: translateY(-30px);}
+	20% {transform: translateY(5px);}
+}
+
+@media (hover: hover) {
+    .item:hover {
+        width: 70px;
+        height: 70px;
+        margin-top: -25px;
+    }
+    .icon:hover + .tooltip{
+        visibility: visible;
+        transform: translateY(-3px);
+        opacity: 1;
+    }
+    .item:hover .bx{
+        font-size: 39px;
+    }
+
+        /* Right side */
+    .item:hover + .item {
+        width: calc(60px + var(--dock-offset-right, 0px));
+        height: calc(60px + var(--dock-offset-right, 0px));
+        margin-top: calc(-15px + var(--dock-offset-right, 0px) * -1);
+    }
+    .item:hover + .item .bx{
+        font-size: calc(33px + var(--icon-offset-right, 0px));
+    }
+    .item:hover + .item + .item {
+        width: calc(50px + var(--dock-offset-right, 0px));
+        height: calc(50px + var(--dock-offset-right, 0px));
+        margin-top: calc(-5px + var(--dock-offset-right, 0px) * -1);
+    }
+    .item:hover + .item + .item .bx{
+        font-size: calc(27px + var(--icon-offset-right, 0px));
+    }
+
+    /* Left side */
+    .item:has(+ .item:hover) {
+        width: calc(60px + var(--dock-offset-left, 0px));
+        height: calc(60px + var(--dock-offset-left, 0px));
+        margin-top: calc(-15px + var(--dock-offset-left, 0px) * -1);
+    }
+    .item:has(+ .item:hover) .bx{
+        font-size: calc(33px + var(--icon-offset-left, 0px));
+    }
+    .item:has(+ .item + .item:hover) {
+        width: calc(50px + var(--dock-offset-left, 0px));
+        height: calc(50px + var(--dock-offset-left, 0px));
+        margin-top: calc(-5px + var(--dock-offset-left, 0px) * -1);
+    }
+    .item:has(+ .item + .item:hover) .bx {
+        font-size: calc(27px + var(--icon-offset-left, 0px));
+    }
+
 }
