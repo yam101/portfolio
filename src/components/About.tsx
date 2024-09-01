@@ -91,9 +91,9 @@ export default function About() {
           open to learning and exploring new opportunities!
         </p>
         <p>
-          📚 In my free time, I enjoy reading, playing video games, or going on
-          a walk. I'm also getting into photography these days, check out some
-          pictures
+          📚 In my free time, I enjoy reading, playing video games, or
+          rewatching my favourite Netflix shows. I'm also getting into
+          photography these days, check out some pictures
           <Link className="link" to="/photos">
             here
           </Link>
