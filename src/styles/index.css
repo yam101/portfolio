@@ -33,7 +33,7 @@
   --border-dock-dark: rgb(50, 50, 50);
 
   --gradient-light: rgba(232, 208, 245, 0.48);
-  --gradient-dark: rgba(50, 40, 57, 0.48);
+  --gradient-dark: rgba(73, 51, 90, 0.48);
 
   --gradient-opacity-light: 1;
   --gradient-opacity-dark: 0.8;
@@ -47,8 +47,11 @@
   --text-tooltip-light: rgb(100, 100, 100);
   --text-tooltip-dark: rgb(167, 167, 167);
 
-  --shadow-project-light: rgb(235, 235, 235);
-  --shadow-project-dark: rgb(20, 20, 20);
+  --shadow-project-light: rgb(235, 235, 235, 0.5);
+  --shadow-project-dark: rgb(20, 20, 20, 0.5);
+
+  --bg-project-light: rgb(245, 245, 245, 0.5);
+  --bg-project-dark: rgb(24, 24, 24, 0.5);
   
   color: var(--text-primary);
   background-color: var(--bg);
@@ -75,6 +78,7 @@
   --border-card: var(--border-card-light);
   --text-tooltip: var(--text-tooltip-light);
   --shadow-project: var(--shadow-project-light);
+  --bg-project: var(--bg-project-light);
 }
 
 .dark-theme {
@@ -93,6 +97,7 @@
   --border-card: var(--border-card-dark);
   --text-tooltip: var(--text-tooltip-dark);
   --shadow-project: var(--shadow-project-dark);
+  --bg-project: var(--bg-project-dark);
 }
 
 body, html{

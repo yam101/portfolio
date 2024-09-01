@@ -23,7 +23,7 @@
 .projects-card{
     display: flex;
     border: 1px solid var(--border-dock);
-    background-color: rgba(var(--bg-primary), 0.75);
+    background-color: var(--bg-project);
     box-shadow: 0px 0px 10px 5px var(--shadow-project);
     border-radius: 15px;
     text-align: left;

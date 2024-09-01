@@ -81,7 +81,7 @@ export default function About() {
         <h2>About</h2>
         <p>
           👋 Hi! I'm Yasmin, a second year Software Engineering student at the
-          University of Waterloo. My goal is to create an positive impact on the
+          University of Waterloo. My goal is to create a positive impact on the
           people around me, whether it be through designing, creating, or
           innovating.
         </p>
