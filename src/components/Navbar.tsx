@@ -37,6 +37,7 @@ function Navbar() {
   const location = useLocation();
   useEffect(() => {
     const currentPage = location.pathname;
+    window.scrollTo(0, 0);
     // console.log(currentPage);
 
     if (currentPage === "/") {
