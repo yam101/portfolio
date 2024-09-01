@@ -60,14 +60,6 @@
     text-decoration-color: transparent;
     margin-right: 20px;
 }
-.icon-container a:hover{
-    margin-right: 17px;
-}
-
-.icon-container a:hover .bx {
-    font-size: 35px;
-    transform: translate(-1.5px, -.5px);
-}
 
 .text-container h1{
    font-size: 80px; 
@@ -77,6 +69,17 @@
 .text-container p{
     font-weight: 500;
     font-size: 18px;
+}
+
+@media (hover: hover) {
+    .icon-container a:hover{
+        margin-right: 17px;
+    }
+    
+    .icon-container a:hover .bx {
+        font-size: 35px;
+        transform: translate(-1.5px, -.5px);
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -108,6 +111,9 @@
         width: 325px;
         height: 325px;
     }
+    .text-container h1{
+        font-size: 60px; 
+     }
 }
 
 @keyframes spin {
