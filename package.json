@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://yam101.github.io/portfolio/",
+  "homepage": "https://yam101.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
