@@ -1,4 +1,3 @@
-import Tilt from "react-parallax-tilt";
 import aws from "../assets/aws.png";
 import azure from "../assets/azure.png";
 import c from "../assets/c.png";
