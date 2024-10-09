@@ -14,7 +14,7 @@ type exp = {
 const experiences = [
   {
     title: "Software Quality Analyst",
-    company: "i4i Labs",
+    company: "i4i",
     date: "May 2024",
     duration: "4 months",
     description:
@@ -44,8 +44,10 @@ const ExperienceCard = ({ experience }: { experience: exp }) => (
     <div className="content">
       <div className="title-container">
         <h4 className="date">{experience.date}</h4>
-        <h4 className="company">{experience.company}</h4>
-        <p>{experience.title}</p>
+        <h4 className="company">{experience.title}</h4>
+      </div>
+      <div className="subtitle-container">
+        <p>{experience.company}</p>
         <p>{experience.duration}</p>
       </div>
       <p className="description">{experience.description}</p>
@@ -82,7 +84,7 @@ export default function About() {
         <p>
           👋 Hi! I'm Yasmin, a second year Software Engineering student at the
           University of Waterloo. My goal is to create a positive impact on the
-          people around me, whether it be through designing, creating, or
+          people around me, whether it's through designing, creating, or
           innovating.
         </p>
         <p>
